@@ -8,7 +8,12 @@ The repository contains C# code and resources for experimenting with and learnin
 
 ## Features
 
-- Various digital image processing algorithms.
+- Basic Copy
+- Invert Colors
+- Grayscale
+- Histogram
+- Sepia
+- Subtraction (Chroma keying)
 
 ## Getting Started
 
