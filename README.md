@@ -1,6 +1,6 @@
 # ImageProcessing
 
-This project is an activity for the course **Intelligent Systems 1**, specifically focused on **Digital Image Processing**.
+This project is an activity for the course **CS345 Intelligent Systems 1**, specifically focused on **Basic Digital Image Processing**.
 
 ## Overview
 
