@@ -133,35 +133,35 @@
             // basicCopyToolStripMenuItem
             // 
             this.basicCopyToolStripMenuItem.Name = "basicCopyToolStripMenuItem";
-            this.basicCopyToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.basicCopyToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
             this.basicCopyToolStripMenuItem.Text = "Basic Copy";
             this.basicCopyToolStripMenuItem.Click += new System.EventHandler(this.basicCopyToolStripMenuItem_Click);
             // 
             // colorInvertionToolStripMenuItem
             // 
             this.colorInvertionToolStripMenuItem.Name = "colorInvertionToolStripMenuItem";
-            this.colorInvertionToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.colorInvertionToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
             this.colorInvertionToolStripMenuItem.Text = "Invert Colors";
             this.colorInvertionToolStripMenuItem.Click += new System.EventHandler(this.colorInvertionToolStripMenuItem_Click);
             // 
             // greyscaleToolStripMenuItem
             // 
             this.greyscaleToolStripMenuItem.Name = "greyscaleToolStripMenuItem";
-            this.greyscaleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.greyscaleToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
             this.greyscaleToolStripMenuItem.Text = "Greyscale";
             this.greyscaleToolStripMenuItem.Click += new System.EventHandler(this.greyscaleToolStripMenuItem_Click);
             // 
             // histogramToolStripMenuItem
             // 
             this.histogramToolStripMenuItem.Name = "histogramToolStripMenuItem";
-            this.histogramToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.histogramToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
             this.histogramToolStripMenuItem.Text = "Histogram";
             this.histogramToolStripMenuItem.Click += new System.EventHandler(this.histogramToolStripMenuItem_Click);
             // 
             // sepiaToolStripMenuItem
             // 
             this.sepiaToolStripMenuItem.Name = "sepiaToolStripMenuItem";
-            this.sepiaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.sepiaToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
             this.sepiaToolStripMenuItem.Text = "Sepia";
             this.sepiaToolStripMenuItem.Click += new System.EventHandler(this.sepiaToolStripMenuItem_Click_1);
             // 
@@ -171,7 +171,7 @@
             this.subtractionStaticToolStripMenuItem,
             this.subtractionWebcamToolStripMenuItem});
             this.advancedFiltersToolStripMenuItem.Name = "advancedFiltersToolStripMenuItem";
-            this.advancedFiltersToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.advancedFiltersToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
             this.advancedFiltersToolStripMenuItem.Text = "Advanced filters";
             this.advancedFiltersToolStripMenuItem.Click += new System.EventHandler(this.advancedFiltersToolStripMenuItem_Click);
             // 
@@ -311,7 +311,7 @@
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.menuStrip1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
