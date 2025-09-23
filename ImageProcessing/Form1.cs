@@ -49,7 +49,15 @@ namespace ImageProcessing
 
         private void button2_Click(object sender, EventArgs e)
         {
-            pictureBox2.Image = pictureBox1.Image;
+
+            if (comboBox1.SelectedIndex == 0)
+            {
+                pictureBox2.Image = ImageProcessing.Processes.Copy((Bitmap)pictureBox1.Image);
+            }
+            else
+            {
+                pictureBox2.Image = pictureBox1.Image;
+            }
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)

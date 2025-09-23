@@ -12,7 +12,23 @@ namespace ImageProcessing
 
         public static Bitmap Copy(Bitmap src)
         {
-            return 
+            return new Bitmap(src);
+        }
+        public static Bitmap GreyScale(Bitmap src)
+        {
+            return new Bitmap(src);
+        }
+        public static Bitmap InvertColor(Bitmap src)
+        {
+            return new Bitmap(src);
+        }
+        public static Bitmap Histogram(Bitmap src)
+        {
+            return new Bitmap(src);
+        }
+        public static Bitmap Sepia(Bitmap src)
+        {
+            return new Bitmap(src);
         }
     }
 }
