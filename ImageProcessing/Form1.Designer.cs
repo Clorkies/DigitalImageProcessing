@@ -51,6 +51,7 @@
             this.button3 = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.button4 = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -96,7 +97,7 @@
             // 
             this.button2.BackColor = System.Drawing.Color.YellowGreen;
             this.button2.Font = new System.Drawing.Font("Product Sans Black", 10.25F, System.Drawing.FontStyle.Bold);
-            this.button2.Location = new System.Drawing.Point(334, 315);
+            this.button2.Location = new System.Drawing.Point(333, 315);
             this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(111, 39);
@@ -208,6 +209,7 @@
             this.label2.Size = new System.Drawing.Size(98, 18);
             this.label2.TabIndex = 8;
             this.label2.Text = "Output image";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
@@ -218,6 +220,7 @@
             this.label3.Size = new System.Drawing.Size(102, 49);
             this.label3.TabIndex = 9;
             this.label3.Text = ">>>>";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label4
             // 
@@ -246,7 +249,7 @@
             // 
             this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.button3.Font = new System.Drawing.Font("Product Sans Black", 10.25F, System.Drawing.FontStyle.Bold);
-            this.button3.Location = new System.Drawing.Point(334, 268);
+            this.button3.Location = new System.Drawing.Point(333, 272);
             this.button3.Margin = new System.Windows.Forms.Padding(2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(111, 39);
@@ -258,7 +261,7 @@
             // pictureBox3
             // 
             this.pictureBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox3.Location = new System.Drawing.Point(856, 81);
+            this.pictureBox3.Location = new System.Drawing.Point(871, 81);
             this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(282, 271);
@@ -274,9 +277,19 @@
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(272, 258);
             this.button4.TabIndex = 14;
-            this.button4.Text = "Click to select an image";
+            this.button4.Text = "Click to select background image";
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Product Sans", 10.25F, System.Drawing.FontStyle.Bold);
+            this.label6.Location = new System.Drawing.Point(970, 50);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(98, 18);
+            this.label6.TabIndex = 15;
+            this.label6.Text = "Output image";
             // 
             // Form1
             // 
@@ -284,6 +297,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Ivory;
             this.ClientSize = new System.Drawing.Size(784, 430);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.button3);
@@ -337,6 +351,7 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Label label6;
     }
 }
 

@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Drawing;
+using System.ComponentModel;
+using System.Windows.Forms;
 
 namespace ImageProcessing
 {
@@ -132,16 +134,26 @@ namespace ImageProcessing
             int height = Math.Min(src1.Height, src2.Height);
             Bitmap result = new Bitmap(width, height);
 
+            int mygreen = 100; 
+            int threshold = 60;   
+
             for (int y = 0; y < height; y++)
             {
                 for (int x = 0; x < width; x++)
                 {
-                    Color c1 = src1.GetPixel(x, y);
-                    Color c2 = src2.GetPixel(x, y);
-                    int r = Math.Max(0, c1.R - c2.R);
-                    int g = Math.Max(0, c1.G - c2.G);
-                    int b = Math.Max(0, c1.B - c2.B);
-                    result.SetPixel(x, y, Color.FromArgb(r, g, b));
+                    Color pixel = src1.GetPixel(x, y);
+                    Color backpixel = src2.GetPixel(x, y);
+
+                    if (pixel.G > mygreen && 
+                        pixel.G - pixel.R > threshold && 
+                        pixel.G - pixel.B > threshold)
+                    {
+                        result.SetPixel(x, y, backpixel);
+                    }
+                    else
+                    {
+                        result.SetPixel(x, y, pixel);
+                    }
                 }
             }
             return result;
