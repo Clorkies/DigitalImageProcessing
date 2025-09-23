@@ -119,6 +119,10 @@ namespace WebCamLib
 		{
 			SendMessage(deviceHandle,WM_CAP_EDIT_COPY,0,0);
 		}
-		
-    }
+        
+        public void SetWindowPosToControl(System.Windows.Forms.Control control)
+        {
+            SetWindowPos(deviceHandle, 1, 0, 0, control.Width, control.Height, 6);
+        }
+	}
 }

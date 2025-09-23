@@ -1,5 +1,5 @@
 ﻿using System;
-    using System.Drawing;
+using System.Drawing;
 using System.Windows.Forms;
 using WebCamLib;
 
@@ -16,7 +16,7 @@ namespace ImageProcessing
         {
             InitializeComponent();
 
-            device = device;
+            this.device = device; // Assign parameter to field
             devices = DeviceManager.GetAllDevices();
             if (devices.Length == 0)
             {
@@ -25,8 +25,8 @@ namespace ImageProcessing
                 Close();
                 return;
             }
-            device = devices[0];
-            if (device == null)
+            this.device = devices[0];
+            if (this.device == null)
             {
                 MessageBox.Show("Invalid camera device.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 DialogResult = DialogResult.Cancel;
@@ -34,7 +34,7 @@ namespace ImageProcessing
                 return;
             }
 
-            device.ShowWindow(pictureBoxCamera);
+            this.device.ShowWindow(pictureBoxCamera);
             pictureBoxCamera.Refresh();
         }
 
@@ -59,12 +59,21 @@ namespace ImageProcessing
 
         private void buttonCapture_Click(object sender, EventArgs e)
         {
+            if (device == null) return;
             device.Sendmessage();
             if (Clipboard.ContainsImage())
             {
-                CapturedImage = new Bitmap(Clipboard.GetImage());
-                DialogResult = DialogResult.OK;
-                Close();
+                var img = Clipboard.GetImage();
+                if (img != null)
+                {
+                    CapturedImage = new Bitmap(img);
+                    DialogResult = DialogResult.OK;
+                    Close();
+                }
+                else
+                {
+                    MessageBox.Show("Clipboard image is null. Camera may not support this operation.");
+                }
             }
             else
             {
