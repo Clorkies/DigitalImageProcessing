@@ -1,6 +1,6 @@
 ﻿namespace ImageProcessing
 {
-    partial class Form1
+    partial class MainForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
@@ -52,6 +52,10 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.button4 = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
+            this.cameraOptionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toggleCameraCaptureToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.turnOnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.offToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -109,7 +113,8 @@
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.filtersToolStripMenuItem});
+            this.filtersToolStripMenuItem,
+            this.cameraOptionsToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(784, 24);
@@ -133,35 +138,35 @@
             // basicCopyToolStripMenuItem
             // 
             this.basicCopyToolStripMenuItem.Name = "basicCopyToolStripMenuItem";
-            this.basicCopyToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
+            this.basicCopyToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.basicCopyToolStripMenuItem.Text = "Basic Copy";
             this.basicCopyToolStripMenuItem.Click += new System.EventHandler(this.basicCopyToolStripMenuItem_Click);
             // 
             // colorInvertionToolStripMenuItem
             // 
             this.colorInvertionToolStripMenuItem.Name = "colorInvertionToolStripMenuItem";
-            this.colorInvertionToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
+            this.colorInvertionToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.colorInvertionToolStripMenuItem.Text = "Invert Colors";
             this.colorInvertionToolStripMenuItem.Click += new System.EventHandler(this.colorInvertionToolStripMenuItem_Click);
             // 
             // greyscaleToolStripMenuItem
             // 
             this.greyscaleToolStripMenuItem.Name = "greyscaleToolStripMenuItem";
-            this.greyscaleToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
+            this.greyscaleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.greyscaleToolStripMenuItem.Text = "Greyscale";
             this.greyscaleToolStripMenuItem.Click += new System.EventHandler(this.greyscaleToolStripMenuItem_Click);
             // 
             // histogramToolStripMenuItem
             // 
             this.histogramToolStripMenuItem.Name = "histogramToolStripMenuItem";
-            this.histogramToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
+            this.histogramToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.histogramToolStripMenuItem.Text = "Histogram";
             this.histogramToolStripMenuItem.Click += new System.EventHandler(this.histogramToolStripMenuItem_Click);
             // 
             // sepiaToolStripMenuItem
             // 
             this.sepiaToolStripMenuItem.Name = "sepiaToolStripMenuItem";
-            this.sepiaToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
+            this.sepiaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.sepiaToolStripMenuItem.Text = "Sepia";
             this.sepiaToolStripMenuItem.Click += new System.EventHandler(this.sepiaToolStripMenuItem_Click_1);
             // 
@@ -171,7 +176,7 @@
             this.subtractionStaticToolStripMenuItem,
             this.subtractionWebcamToolStripMenuItem});
             this.advancedFiltersToolStripMenuItem.Name = "advancedFiltersToolStripMenuItem";
-            this.advancedFiltersToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
+            this.advancedFiltersToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.advancedFiltersToolStripMenuItem.Text = "Advanced filters";
             this.advancedFiltersToolStripMenuItem.Click += new System.EventHandler(this.advancedFiltersToolStripMenuItem_Click);
             // 
@@ -291,7 +296,39 @@
             this.label6.TabIndex = 15;
             this.label6.Text = "Output image";
             // 
-            // Form1
+            // cameraOptionsToolStripMenuItem
+            // 
+            this.cameraOptionsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toggleCameraCaptureToolStripMenuItem});
+            this.cameraOptionsToolStripMenuItem.Name = "cameraOptionsToolStripMenuItem";
+            this.cameraOptionsToolStripMenuItem.Size = new System.Drawing.Size(105, 20);
+            this.cameraOptionsToolStripMenuItem.Text = "Camera Options";
+            // 
+            // toggleCameraCaptureToolStripMenuItem
+            // 
+            this.toggleCameraCaptureToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.turnOnToolStripMenuItem,
+            this.offToolStripMenuItem});
+            this.toggleCameraCaptureToolStripMenuItem.Name = "toggleCameraCaptureToolStripMenuItem";
+            this.toggleCameraCaptureToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.toggleCameraCaptureToolStripMenuItem.Text = "Camera Capture";
+            this.toggleCameraCaptureToolStripMenuItem.Click += new System.EventHandler(this.toggleCameraCaptureToolStripMenuItem_Click);
+            // 
+            // turnOnToolStripMenuItem
+            // 
+            this.turnOnToolStripMenuItem.Name = "turnOnToolStripMenuItem";
+            this.turnOnToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.turnOnToolStripMenuItem.Text = "On";
+            this.turnOnToolStripMenuItem.Click += new System.EventHandler(this.turnOnToolStripMenuItem_Click);
+            // 
+            // offToolStripMenuItem
+            // 
+            this.offToolStripMenuItem.Name = "offToolStripMenuItem";
+            this.offToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.offToolStripMenuItem.Text = "Off";
+            this.offToolStripMenuItem.Click += new System.EventHandler(this.offToolStripMenuItem_Click);
+            // 
+            // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -315,7 +352,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
-            this.Name = "Form1";
+            this.Name = "MainForm";
             this.Text = "Image Processing";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -352,6 +389,10 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ToolStripMenuItem cameraOptionsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem toggleCameraCaptureToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem turnOnToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem offToolStripMenuItem;
     }
 }
 

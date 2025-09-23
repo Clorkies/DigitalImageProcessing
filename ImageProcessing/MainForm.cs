@@ -10,13 +10,14 @@ using System.Windows.Forms;
 
 namespace ImageProcessing
 {
-    public partial class Form1 : Form
+    public partial class MainForm : Form
     {
         int index;
         private bool isAdvancedFilter = false;
         private string currentAdvancedFilter = "";
+        private bool cameraCaptureEnabled = false;
 
-        public Form1()
+        public MainForm()
         {
             InitializeComponent();
             label1.TextAlign = ContentAlignment.MiddleCenter;
@@ -99,13 +100,28 @@ namespace ImageProcessing
 
         private void button1_Click(object sender, EventArgs e)
         {
-            using (OpenFileDialog ofile = new OpenFileDialog())
+            if (cameraCaptureEnabled)
             {
-                ofile.Filter = "Image files (*.jpg, *.jpeg, *.png) | *.jpg; *.jpeg; *.png";
-                if (ofile.ShowDialog() == DialogResult.OK)
+                using (CameraForm camForm = new CameraForm())
                 {
-                    pictureBox1.Image = Image.FromFile(ofile.FileName);
-                    button1.Visible = false;
+                    camForm.ShowDialog();
+                    if (camForm.CapturedImage != null)
+                    {
+                        pictureBox1.Image = camForm.CapturedImage;
+                        button1.Visible = false;
+                    }
+                }
+            }
+            else
+            {
+                using (OpenFileDialog ofile = new OpenFileDialog())
+                {
+                    ofile.Filter = "Image files (*.jpg, *.jpeg, *.png) | *.jpg; *.jpeg; *.png";
+                    if (ofile.ShowDialog() == DialogResult.OK)
+                    {
+                        pictureBox1.Image = Image.FromFile(ofile.FileName);
+                        button1.Visible = false;
+                    }
                 }
             }
         }
@@ -187,13 +203,28 @@ namespace ImageProcessing
 
         private void button4_Click(object sender, EventArgs e)
         {
-            using (OpenFileDialog ofile = new OpenFileDialog())
+            if (cameraCaptureEnabled)
             {
-                ofile.Filter = "Image files (*.jpg, *.jpeg, *.png) | *.jpg; *.jpeg; *.png";
-                if (ofile.ShowDialog() == DialogResult.OK)
+                using (CameraForm camForm = new CameraForm())
                 {
-                    pictureBox2.Image = Image.FromFile(ofile.FileName);
-                    button4.Visible = false;
+                    camForm.ShowDialog();
+                    if (camForm.CapturedImage != null)
+                    {
+                        pictureBox2.Image = camForm.CapturedImage;
+                        button4.Visible = false;
+                    }
+                }
+            }
+            else
+            {
+                using (OpenFileDialog ofile = new OpenFileDialog())
+                {
+                    ofile.Filter = "Image files (*.jpg, *.jpeg, *.png) | *.jpg; *.jpeg; *.png";
+                    if (ofile.ShowDialog() == DialogResult.OK)
+                    {
+                        pictureBox2.Image = Image.FromFile(ofile.FileName);
+                        button4.Visible = false;
+                    }
                 }
             }
         }
@@ -251,6 +282,25 @@ namespace ImageProcessing
         private void label2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void toggleCameraCaptureToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void turnOnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            cameraCaptureEnabled = true;
+            turnOnToolStripMenuItem.Checked = true;
+            offToolStripMenuItem.Checked = false;
+        }
+
+        private void offToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            cameraCaptureEnabled = false;
+            turnOnToolStripMenuItem.Checked = false;
+            offToolStripMenuItem.Checked = true;
         }
     }
 }
