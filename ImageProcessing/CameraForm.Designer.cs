@@ -34,7 +34,7 @@
             this.pictureBoxCamera.Location = new System.Drawing.Point(9, 10);
             this.pictureBoxCamera.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBoxCamera.Name = "pictureBoxCamera";
-            this.pictureBoxCamera.Size = new System.Drawing.Size(240, 195);
+            this.pictureBoxCamera.Size = new System.Drawing.Size(282, 271);
             this.pictureBoxCamera.TabIndex = 0;
             this.pictureBoxCamera.TabStop = false;
             this.pictureBoxCamera.Click += new System.EventHandler(this.pictureBoxCamera_Click);
@@ -42,10 +42,10 @@
             // buttonCapture
             // 
             this.buttonCapture.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.buttonCapture.Location = new System.Drawing.Point(90, 215);
+            this.buttonCapture.Location = new System.Drawing.Point(91, 295);
             this.buttonCapture.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonCapture.Name = "buttonCapture";
-            this.buttonCapture.Size = new System.Drawing.Size(75, 24);
+            this.buttonCapture.Size = new System.Drawing.Size(111, 44);
             this.buttonCapture.TabIndex = 1;
             this.buttonCapture.Text = "Capture";
             this.buttonCapture.UseVisualStyleBackColor = false;
@@ -55,7 +55,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(258, 253);
+            this.ClientSize = new System.Drawing.Size(301, 350);
             this.Controls.Add(this.buttonCapture);
             this.Controls.Add(this.pictureBoxCamera);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;

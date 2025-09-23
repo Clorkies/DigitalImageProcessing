@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Text;
 using System.Runtime.InteropServices;
+using System.Drawing;
 
 namespace WebCamLib
 {
@@ -102,9 +103,22 @@ namespace WebCamLib
         /// </summary>
         /// <param name="windowsControl">Control to attach the webcam preview</param>
         ///                    global::  
-        public void ShowWindow(System.Windows.Forms.Control windowsControl )
+        public void ShowWindow(System.Windows.Forms.Control windowsControl)
         {
-            Init(windowsControl.Height, windowsControl.Width , windowsControl.Handle.ToInt32());                        
+            // Use the parent form's handle
+            var parentForm = windowsControl.FindForm();
+            if (parentForm == null) return;
+
+            // Get the location of the PictureBox relative to the form
+            var location = windowsControl.PointToScreen(Point.Empty);
+            var formLocation = parentForm.PointToScreen(Point.Empty);
+            int x = location.X - formLocation.X;
+            int y = location.Y - formLocation.Y;
+
+            Init(windowsControl.Height, windowsControl.Width, parentForm.Handle.ToInt32());
+
+            // Move the capture window over the PictureBox
+            SetWindowPos(deviceHandle, 0, x, y, windowsControl.Width, windowsControl.Height, 0);
         }
 
         /// <summary>
