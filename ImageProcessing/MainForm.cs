@@ -203,20 +203,20 @@ namespace ImageProcessing
 
         private void button4_Click(object sender, EventArgs e)
         {
-            if (cameraCaptureEnabled)
-            {
-                using (CameraForm camForm = new CameraForm())
-                {
-                    camForm.ShowDialog();
-                    if (camForm.CapturedImage != null)
-                    {
-                        pictureBox2.Image = camForm.CapturedImage;
-                        button4.Visible = false;
-                    }
-                }
-            }
-            else
-            {
+            //if (cameraCaptureEnabled)
+            //{
+            //    using (CameraForm camForm = new CameraForm())
+            //    {
+            //        camForm.ShowDialog();
+            //        if (camForm.CapturedImage != null)
+            //        {
+            //            pictureBox2.Image = camForm.CapturedImage;
+            //            button4.Visible = false;
+            //        }
+            //    }
+            //}
+            //else
+            //{
                 using (OpenFileDialog ofile = new OpenFileDialog())
                 {
                     ofile.Filter = "Image files (*.jpg, *.jpeg, *.png) | *.jpg; *.jpeg; *.png";
@@ -226,7 +226,7 @@ namespace ImageProcessing
                         button4.Visible = false;
                     }
                 }
-            }
+            //}
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -294,6 +294,13 @@ namespace ImageProcessing
             cameraCaptureEnabled = true;
             turnOnToolStripMenuItem.Checked = true;
             offToolStripMenuItem.Checked = false;
+
+            MessageBox.Show(
+                "If camera preview is not showing anything, download and use ManyCam (https://manycam.com/) as your camera device.",
+                "Camera Preview Help",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Information
+            );
         }
 
         private void offToolStripMenuItem_Click(object sender, EventArgs e)
