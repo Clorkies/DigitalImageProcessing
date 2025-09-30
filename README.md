@@ -8,11 +8,25 @@ The repository contains C# code and resources for experimenting with and learnin
 
 ## Features
 
+Basic Filters
 - Basic Copy
 - Invert Colors
 - Grayscale
 - Histogram
 - Sepia
+
+Advanced Filters
+- Smoothen
+- Sharpen
+- Mean Removal
+- Emboss Laplacian
+- Emboss Lossy
+- Emboss Horizontal
+- Emboss Vertical
+- Emboss Horizontal-Vertical
+- Emboss All Directions]
+
+Special Filter
 - Subtraction (Chroma keying)
 
 ## Getting Started
@@ -23,4 +37,5 @@ The repository contains C# code and resources for experimenting with and learnin
 
 ## License
 
-This project is for educational purposes.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
