@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace ImageProcessing
 {
-    public static class Processes
+    public static class BasicProcess
     {
         public static Bitmap result;
 
@@ -30,6 +30,7 @@ namespace ImageProcessing
 
             return result;
         }
+        
         public static Bitmap LegacyGreyScale(Bitmap src)
         {
             result = new Bitmap(src.Width, src.Height);
@@ -51,6 +52,7 @@ namespace ImageProcessing
 
             return result;
         }
+        
         public static Bitmap LegacyInvertColor(Bitmap src)
         {
             result = new Bitmap(src.Width, src.Height);
@@ -159,6 +161,8 @@ namespace ImageProcessing
             }
             return result;
         }
+
+
 
         //////////////
         // Pointer-based approach for faster processing
