@@ -1,6 +1,6 @@
 # ImageProcessing
 
-This project is an activity for the course **Intelligent Systems 1**, specifically focused on **Digital Image Processing**.
+This project is an activity for the course **CS345 Intelligent Systems 1**, specifically focused on **Basic Digital Image Processing**.
 
 ## Overview
 
@@ -8,7 +8,12 @@ The repository contains C# code and resources for experimenting with and learnin
 
 ## Features
 
-- Various digital image processing algorithms.
+- Basic Copy
+- Invert Colors
+- Grayscale
+- Histogram
+- Sepia
+- Subtraction (Chroma keying)
 
 ## Getting Started
 
