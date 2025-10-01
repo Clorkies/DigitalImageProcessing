@@ -213,7 +213,7 @@ public class ConvolutionMatrix
     }
 
     //Smoothen
-    public static bool Smooth(Bitmap b, int nWeight /* default to 1 */)
+    public static bool Smooth(Bitmap b, int nWeight = 1)
     {
         ConvolutionMatrix m = new ConvolutionMatrix();
         m.SetAll(1);
@@ -319,7 +319,7 @@ public class ConvolutionMatrix
     {
         ConvolutionMatrix m = new ConvolutionMatrix();
         m.TopLeft = m.TopRight = m.BottomLeft = m.BottomRight = 0;
-        m.TopMid = m.MidLeft = m.MidRight = -1;
+        m.BottomMid = m.TopMid = m.MidLeft = m.MidRight = -1;
         m.Pixel = 4;
         m.Offset = 127;
 
