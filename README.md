@@ -7,6 +7,7 @@ This project is an activity for the course **CS345 Intelligent Systems 1**, spec
 The repository contains C# code and resources for experimenting with and learning about digital image processing techniques. It is intended as a hands-on activity to reinforce concepts from the Intelligent Systems 1 curriculum.
 
 ## Features
+- Webcam Integration
 
 Basic Filters
 - Basic Copy
