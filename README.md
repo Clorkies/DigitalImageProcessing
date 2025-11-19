@@ -1,5 +1,7 @@
 # ImageProcessing
 
+![Picasso Main Interface](https://i.imgur.com/RGHAWJW.png)
+
 This project is an activity for the course **CS345 Intelligent Systems 1**, specifically focused on **Basic Digital Image Processing**.
 
 ## Overview
